@@ -25,7 +25,7 @@ namespace SistemaLocadora
 
         private void cadastraClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cliente1 cli = new Cliente1(0); // chamando outro forms
+            Cliente1 cli = new Cliente1(0); 
             cli.ShowDialog();
         }
 
@@ -51,8 +51,7 @@ namespace SistemaLocadora
             LogRh logRh = new LogRh();  
              logRh.ShowDialog();
 
-           /* CadastroFunc cadastroFunc = new CadastroFunc();
-            cadastroFunc.ShowDialog();*/
+          
         }
     }
 }

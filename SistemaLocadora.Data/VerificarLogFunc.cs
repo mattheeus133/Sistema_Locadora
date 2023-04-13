@@ -17,7 +17,7 @@ namespace SistemaLocadora.Data
             if (!loginDalComandos.mensagem.Equals(""))
             {
                 this.mensagem = loginDalComandos.mensagem;
-                // metodo para saber se ouve algum erro no codigo
+               
             }
             return tem;
         }
@@ -31,7 +31,7 @@ namespace SistemaLocadora.Data
               if (!loginDalComandos.mensagem.Equals(""))
               {
                 this.mensagem = loginDalComandos.mensagem;
-                // metodo para saber se ouve algum erro no codigo
+               
               }
             
 

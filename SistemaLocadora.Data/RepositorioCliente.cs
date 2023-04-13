@@ -13,12 +13,9 @@ namespace SistemaLocadora.Data
 {
 	public class RepositorioCliente : Repositorio
 	{
-
+		
 		public void Save(ClienteFunc cliente)
 		{
-			/*var Sql = "insert into Cliente (cNmNome,dNascimento, cGenero, cEmail, cTelefone, cCelular, cPessoa, cCpf, cRg, cOrgExp, cUfExp, cCep, cEndereco, cNumero, cUf, cBairro, cCidade, cComplemento) values(@AcNmNome, @AdNascimento " +
-				"                          ,@AcGenero ,@AcEmail ,@AcTelefone ,@AcCelular ,@AcPessoa ,@AcCpf ,@AcRG " +
-				"                          ,@AcOrgExp ,@AcUfExp ,@AcCep ,@AcEndereco ,@AcNumero ,@AcUF ,@AcBairro ,@AcCidade ,@AcComplemento)";*/
 
 			var Sql = "EXEC dbo.SP_SalvarCliente  @AcNmNome, @AdNascimento " +
 				"                          ,@AcGenero ,@AcEmail ,@AcTelefone ,@AcCelular ,@AcPessoa ,@AcCpf ,@AcRG " +

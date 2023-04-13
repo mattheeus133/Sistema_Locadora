@@ -11,10 +11,10 @@ namespace SistemaLocadora.Data
 {
     public class RepositorioFunc : ClienteFunc
     {
-        //ClienteFunc clienteFunc = new ClienteFunc();
+        
         public void Salvar(ClienteFunc clienteFunc)
         {
-            byte[] foto = GetFoto(clienteFunc.CaminhoFoto); /*chamando o metodo para obter a foto*/
+            byte[] foto = GetFoto(clienteFunc.CaminhoFoto); 
 
             var sql = "INSERT INTO Funcionario(cNmNome,dNascimento,cGenero,Naturalidade,UFnasc,cTelefone,cCelular,cCep,cEndereco,cNumero,cComplemento,cBairro ,cCidade,UFresid,cEmail,Estado_Civil,cCPF,cRG,cUfExp ,Titulo_Eleitor ,Secao,Zona ,PIS ,Banco ,Agencia ,Conta ,Tipo_Conta, FotoFunc) values (@cNmNome,@dNascimento,@cGenero,@Naturalidade,@UFnasc,@cTelefone,@cCelular,@cCep,@cEndereco,@cNumero,@cComplemento,@cBairro ,@cCidade,@UFresid,@cEmail,@Estado_Civil,@cCPF,@cRG,@cUfExp ,@Titulo_Eleitor ,@Secao,@Zona ,@PIS ,@Banco ,@Agencia ,@Conta ,@Tipo_Conta, @FotoFunc)";
 
@@ -79,7 +79,7 @@ namespace SistemaLocadora.Data
             }
         }
 
-        public byte[] GetFoto(string caminhoFoto) /*Metodo para obter a foto*/
+        public byte[] GetFoto(string caminhoFoto) 
         {
             byte[] foto;
             using (var stream = new FileStream(caminhoFoto, FileMode.Open, FileAccess.Read)) 

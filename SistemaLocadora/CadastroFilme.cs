@@ -60,7 +60,7 @@ namespace SistemaLocadora
             filme.iQtd =Convert.ToInt32(txtQtd.Text);
             filme.CaminhoFoto = caminhoFoto;
 
-            filme.Salvar(filme); // Chamando o metodo de salvamento
+            filme.Salvar(filme); 
 
             MessageBox.Show("Filme gravado");
         }

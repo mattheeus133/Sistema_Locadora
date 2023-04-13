@@ -22,7 +22,7 @@ namespace SistemaLocadora
 
         private void CadastroFunc_Load(object sender, EventArgs e)
         {
-            txtSecao.MaxLength = 3; // definir um limite de caracter no textbox
+            txtSecao.MaxLength = 3; 
             txtZona.MaxLength = 3;
             txtAgencia.MaxLength = 4;
         }

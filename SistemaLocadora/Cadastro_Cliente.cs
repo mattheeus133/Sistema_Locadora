@@ -33,7 +33,7 @@ namespace SistemaLocadora
 
         private void Cliente1_Load(object sender, EventArgs e)
         {
-            /* deixando o combobox selecionado sempre no primeiro item */
+           
             cbGenero.SelectedIndex = 0;
             cbPessoa.SelectedIndex = 0;
        
@@ -43,12 +43,11 @@ namespace SistemaLocadora
         #region Botao Cadastra Cliente
         private void btnCadastra_Click(object sender, EventArgs e)
         {
-           /*Criando uma variavel para chamar a classe ClienteFunc*/
             var novoCliente = new ClienteFunc();
 
             #region Verificando os TextBox
 
-            /*Aqui faz a verificação dos textBox*/
+            
 
             if (String.IsNullOrWhiteSpace(txtNome.Text))
             {
@@ -82,12 +81,12 @@ namespace SistemaLocadora
                 MessageBox.Show("Entre com um Cep!");
                 return;
             }
-            /*Fim da verificação dos textbox*/
+           
 
             #endregion
 
             #region Valores nos TextBox
-            /*Recebendo os valores nos TextBox*/
+            
             
             try
             { 
@@ -119,7 +118,7 @@ namespace SistemaLocadora
                 else
                 {
 
-                    //novoCliente.nCdCliente = Convert.ToDecimal(txtId.Text);
+                    
                     novoCliente.cNmNome = txtNome.Text;
                     novoCliente.dNascimento = txtNasc.Text;
                     novoCliente.cGenero = Convert.ToString(cbGenero.SelectedIndex + 1);
@@ -152,7 +151,7 @@ namespace SistemaLocadora
 
 
             #region toolStrip
-            /*Metodo do toolStrip*/
+           
 
             Processar( "Salvando cliente");
 

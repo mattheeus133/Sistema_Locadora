@@ -26,15 +26,33 @@ namespace SistemaLocadora
                 using (SqlConnection cn = new SqlConnection(Conn.StrCon))
                 {
                     cn.Open();
-
-                    var sqlQuery = "EXEC dbo.SP_ObterCliente @AnCdCliente = " + txtConId.Text;
-                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
+                    if (txtConId.Text != String.Empty) 
                     {
-                        using (DataTable dt = new DataTable())
+                        var sqlQuery = "EXEC dbo.SP_ObterCliente @AnCdCliente = " + txtConId.Text;
+                        using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                         {
-                            da.Fill(dt);
-                            dtgCliente.DataSource = dt;
+                            using (DataTable dt = new DataTable())
+                            {
+                                da.Fill(dt);
+                                dtgCliente.DataSource = dt;
+                            }
                         }
+                    }
+
+                    else
+                    {
+                        var sql = "select * from Cliente ";
+                        using (SqlDataAdapter da = new SqlDataAdapter(sql, cn))
+                        {
+                            using (DataTable dt = new DataTable())
+                            {
+                                da.Fill(dt);
+                                dtgCliente.DataSource = dt;
+                            }
+                        }
+
+
+
                     }
                 }
             }

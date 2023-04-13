@@ -44,10 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Conn.cs" />
     <Compile Include="LoginFunc.cs" />
-    <Compile Include="Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioCliente.cs" />
     <Compile Include="RepositorioFilme.cs" />

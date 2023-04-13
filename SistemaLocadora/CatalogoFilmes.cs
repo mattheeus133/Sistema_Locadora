@@ -33,14 +33,14 @@ namespace SistemaLocadora
 
                     if (txtCodFilme.Text != "")
                     {
-                        sqlQuery = "SELECT nCdDVD ,cNmNome, cGenero, iQtd, cFoto  FROM DVD WHERE nCdDVD = " + txtCodFilme.Text; // Pesquisa catalogo filme por id
+                        sqlQuery = "SELECT nCdDVD ,cNmNome, cGenero, iQtd, cFoto  FROM DVD WHERE nCdDVD = " + txtCodFilme.Text; 
                         
                         
                     }
                     if(txtNomeCatalogo.Text != "")
                     {
                         sqlQuery = "SELECT nCdDVD ,cNmNome, cGenero, iQtd, cFoto FROM DVD WHERE cNmNome LIKE '%" + txtNomeCatalogo.Text + "%'"; 
-                        // pesquisa no catalogo filme por parte do nome do filme
+                        
                     }
 
 
@@ -73,7 +73,7 @@ namespace SistemaLocadora
             MemoryStream ms = new MemoryStream(imgData);
             PbimgFilme.Image = Image.FromStream(ms);
 
-            //Convert.ToByte((byte[])row.Cells[4].Value) = imgFilme.Image;
+            
 
 
 
