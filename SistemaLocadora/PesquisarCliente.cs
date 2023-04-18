@@ -19,47 +19,11 @@ namespace SistemaLocadora
             InitializeComponent();
         }
         Conn conn = new Conn();
+
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection cn = new SqlConnection(Conn.StrCon))
-                {
-                    cn.Open();
-                    if (txtConId.Text != String.Empty) 
-                    {
-                        var sqlQuery = "EXEC dbo.SP_ObterCliente @AnCdCliente = " + txtConId.Text;
-                        using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
-                        {
-                            using (DataTable dt = new DataTable())
-                            {
-                                da.Fill(dt);
-                                dtgCliente.DataSource = dt;
-                            }
-                        }
-                    }
-
-                    else
-                    {
-                        var sql = "select * from Cliente ";
-                        using (SqlDataAdapter da = new SqlDataAdapter(sql, cn))
-                        {
-                            using (DataTable dt = new DataTable())
-                            {
-                                da.Fill(dt);
-                                dtgCliente.DataSource = dt;
-                            }
-                        }
-
-
-
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Falha\n\n" + ex.Message);
-            }
+           
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -67,6 +31,34 @@ namespace SistemaLocadora
             var nCdCliente =Convert.ToInt32(dtgCliente.Rows[dtgCliente.CurrentCell.RowIndex].Cells[0].Value);
             Cliente1 cadastro_Cliente = new Cliente1(nCdCliente);
             cadastro_Cliente.ShowDialog();
+        }
+
+        public void Buscar()
+        {
+            try
+            {
+                var sql = "Select * from Cliente";
+
+                using (SqlConnection cn = new SqlConnection(Conn.StrCon))
+                {
+                    cn.Open();
+
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(sql, cn))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dtgCliente.DataSource = dt;
+                        }
+                    }
+                
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha\n\n" + ex.Message);
+            }
         }
     }
 }

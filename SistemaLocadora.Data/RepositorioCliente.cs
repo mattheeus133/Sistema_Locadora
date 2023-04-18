@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SistemaLocadora.Data
 {
-	public class RepositorioCliente : Repositorio
+	public class RepositorioCliente 
 	{
 		
 		public void Save(ClienteFunc cliente)
