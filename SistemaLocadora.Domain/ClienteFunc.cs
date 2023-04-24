@@ -44,7 +44,45 @@ namespace SistemaLocadora.Domain
         public string Conta  { get; set; }
         public string Tipo_Conta { get; set; }
 
+      /*  public ClienteFunc() { }
 
-
+        public ClienteFunc(byte[] fotoFunc, string caminhoFoto, decimal? nCdCliente, int rAFunc, string cSenha, string cargo, string cNmNome, string dNascimento, string cGenero, string naturalidade, string uFnasc, string cEmail, string cTelefone, string cCelular, string cPessoa, string cCpf, string cRG, string cOrgExp, string cUfExp, string estado_Civil, string cCep, string cEndereco, int? cNumero, string cUFresid, string cBairro, string cCidade, string cComplemento, string titulo_Eleitor, string secao, string zona, string pIS, string banco, string agencia, string conta, string tipo_Conta)
+        {
+           this.FotoFunc = fotoFunc;
+            this.CaminhoFoto = caminhoFoto;
+            this.nCdCliente = nCdCliente;
+            this.RAFunc = rAFunc;
+            this.cSenha = cSenha;
+            this.Cargo = cargo;
+            this.cNmNome = cNmNome;
+            this.dNascimento = dNascimento;
+            this.cGenero = cGenero;
+            this.Naturalidade = naturalidade;
+            this.UFnasc = uFnasc;
+            this.cEmail = cEmail;
+            this.cTelefone = cTelefone;
+            this.cCelular = cCelular;
+            this.cPessoa = cPessoa;
+            this.cCpf = cCpf;
+            this.cRG = cRG;
+            this.cOrgExp = cOrgExp;
+            this.cUfExp = cUfExp;
+            this.Estado_Civil = estado_Civil;
+            this.cCep = cCep;
+            this.cEndereco = cEndereco;
+            this.cNumero = cNumero;
+            this.cUFresid = cUFresid;
+            this.cBairro = cBairro;
+            this.cCidade = cCidade;
+            this.cComplemento = cComplemento;
+           this.Titulo_Eleitor = titulo_Eleitor;
+            this.Secao = secao;
+            this.Zona = zona;
+            this.PIS = pIS;
+            this.Banco = banco;
+            this.Agencia = agencia;
+            this.Conta = conta;
+            this.Tipo_Conta = tipo_Conta;
+        }*/
     }
 }

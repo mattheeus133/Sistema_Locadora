@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PesquisarCliente));
             this.dtgCliente = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtConId = new System.Windows.Forms.TextBox();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.alterartoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExcluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCliente)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgCliente
@@ -46,55 +50,67 @@
             this.dtgCliente.Size = new System.Drawing.Size(776, 337);
             this.dtgCliente.TabIndex = 0;
             // 
-            // btnConsultar
+            // menuStrip1
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(419, 59);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 1;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.alterartoolStripMenuItem1,
+            this.ExcluirToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label1
+            // alterartoolStripMenuItem1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID Cliente";
+            this.alterartoolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("alterartoolStripMenuItem1.Image")));
+            this.alterartoolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.alterartoolStripMenuItem1.Name = "alterartoolStripMenuItem1";
+            this.alterartoolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.alterartoolStripMenuItem1.Size = new System.Drawing.Size(70, 20);
+            this.alterartoolStripMenuItem1.Text = "&Alterar";
+            this.alterartoolStripMenuItem1.ToolTipText = "Alterar";
+            this.alterartoolStripMenuItem1.Click += new System.EventHandler(this.alterartoolStripMenuItem1_Click);
             // 
-            // txtConId
+            // ExcluirToolStripMenuItem
             // 
-            this.txtConId.Location = new System.Drawing.Point(233, 61);
-            this.txtConId.Name = "txtConId";
-            this.txtConId.Size = new System.Drawing.Size(180, 20);
-            this.txtConId.TabIndex = 3;
+            this.ExcluirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ExcluirToolStripMenuItem.Image")));
+            this.ExcluirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExcluirToolStripMenuItem.Name = "ExcluirToolStripMenuItem";
+            this.ExcluirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.ExcluirToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.ExcluirToolStripMenuItem.Text = "&Excluir";
+            this.ExcluirToolStripMenuItem.ToolTipText = "Excluir";
+            this.ExcluirToolStripMenuItem.Click += new System.EventHandler(this.ExcluirToolStripMenuItem_Click);
             // 
-            // btnAlterar
+            // contextMenuStrip1
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(500, 59);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 4;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(64, 20);
+            this.toolStripMenuItem2.Text = "&Novo";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // PesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.txtConId);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dtgCliente);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "PesquisarCliente";
             this.Text = "PesquisarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dtgCliente)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,9 +119,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgCliente;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtConId;
-        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem alterartoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ExcluirToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

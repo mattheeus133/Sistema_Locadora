@@ -48,6 +48,8 @@
     <Compile Include="CarregarFoto.cs" />
     <Compile Include="ClienteFunc.cs" />
     <Compile Include="Filme.cs" />
+    <Compile Include="Opcoes.cs" />
+    <Compile Include="Operacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

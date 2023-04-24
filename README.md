@@ -3,6 +3,8 @@
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
+Obs:Projeto contem comentarios explicando cada ponto de seu desenvolvimento.
+
 # Índice 
 
 * [Descrição do Projeto](#descrição-do-projeto)
@@ -40,25 +42,30 @@ Interface de login do funcinario no sistema da locadora.
 
 **Obs:** Algumas funções no sistema precisara de uma permissão de acesso superior.
 
-![LoginLocadora](Imag/LoginLocadora.png)
+![LoginLocadora](READMI_LOCADORA/Imag/LoginLocadora.png)
 
   - `Pagina Inicial`: 
 ##### Interface inicial do sistema:
 Interface inicial do sistema onde sera feito a escolha de atividade a ser ultilizada no momento.
 
 
-![InterfacePrin](Imag/InterfacePrin.png)
+![InterfacePrin](READMI_LOCADORA/Imag/InterfacePrin.png)
 
 
 - `Pagina de Cadastro do Cliente`: 
 
 Cadastro de cliente 
 
-![CadCliente](Imag/CadCliente.png)
+![CadCliente](READMI_LOCADORA/Imag/CadCliente.png)
 
 # Acesso ao projeto
 
 # Tecnologias utilizadas
+
+- ``C# \ CSharp``
+- ``.NET Framework``
+- ``Banco de dados com SQL Server``
+  
 
 
 

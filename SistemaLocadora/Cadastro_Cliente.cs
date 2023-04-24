@@ -19,15 +19,54 @@ namespace SistemaLocadora
     {
         RepositorioCliente repositorioCliente = new RepositorioCliente();
 
+        ClienteFunc clienteFunc = new ClienteFunc();
+
         int nCdCliente = 0;
-        public Cliente1(int nCdCliente)
+        public Cliente1(int nCdCliente, Operacao operacao)
         {
             InitializeComponent();
+           // this.clienteFunc = clienteFunc;
+
             this.nCdCliente = nCdCliente;
 
             if (this.nCdCliente > 0)
                GetCliente(nCdCliente);
+
+            if (operacao == Operacao.Excluir)
+            {
+                this.Text += " - Excluir";
+                TravarTxt();
+                btnCadastra.Visible = false;
+                btnLimpar.Visible = false;
+                btnExcluir.Visible = true;
+                
+            }
         }
+
+        public void TravarTxt()
+        {
+            txtNome.Enabled = false;
+            txtNasc.Enabled = false;
+            cbGenero.Enabled = false;
+            txtEmail.Enabled = false;
+            txtTel.Enabled = false;
+            txtCel.Enabled = false;
+            cbPessoa.Enabled = false;
+            txtCpf.Enabled = false;
+            txtRg.Enabled = false;
+            txtOrg.Enabled = false;
+            txtUf.Enabled = false;
+            txtCep.Enabled = false;
+            txtEnd.Enabled = false;
+            txtNumCasa.Enabled =false;
+            txtUfend.Enabled = false;
+            txtBairro.Enabled = false;
+            txtCidade.Enabled = false;
+            txtComplemento.Enabled = false;
+
+        }
+            
+
 
 
 
@@ -113,6 +152,7 @@ namespace SistemaLocadora
                     novoCliente.cComplemento = txtComplemento.Text;
 
                     repositorioCliente.update(novoCliente);
+                    this.Close();
                 }
 
                 else
@@ -140,6 +180,7 @@ namespace SistemaLocadora
 
                     repositorioCliente.Save(novoCliente);
                     txtId.Text = novoCliente.nCdCliente.ToString();
+                    this.Close();
                 }
             }
             catch
@@ -220,6 +261,7 @@ namespace SistemaLocadora
         #endregion
 
         #region Botão delete
+       
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             var delet = new ClienteFunc();
@@ -229,10 +271,12 @@ namespace SistemaLocadora
             repositorioCliente.Delet(delet);
 
             MessageBox.Show("Cliente Excluido");
+            this.Close();
+
         }
         #endregion
 
-        public void GetCliente(int nCdCliente)
+       public void GetCliente(int nCdCliente)
         {
 
             try

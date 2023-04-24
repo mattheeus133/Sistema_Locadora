@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastraClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastraFilmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,8 +57,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem,
-            this.cadastraClienteToolStripMenuItem});
+            this.clienteToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 20);
             this.toolStripMenuItem1.Text = "Cliente";
@@ -67,16 +65,9 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.clienteToolStripMenuItem.Text = "Buscar/Alterar cliente";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.clienteToolStripMenuItem.Text = "Cadastra/Buscar/Alterar cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
-            // 
-            // cadastraClienteToolStripMenuItem
-            // 
-            this.cadastraClienteToolStripMenuItem.Name = "cadastraClienteToolStripMenuItem";
-            this.cadastraClienteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.cadastraClienteToolStripMenuItem.Text = "Cadastra cliente";
-            this.cadastraClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastraClienteToolStripMenuItem_Click);
             // 
             // filmesToolStripMenuItem
             // 
@@ -163,7 +154,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastraClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filmesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastraFilmesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catalogoToolStripMenuItem;

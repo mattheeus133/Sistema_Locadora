@@ -1,4 +1,5 @@
 ﻿using SistemaLocadora.Data;
+using SistemaLocadora.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,20 +21,13 @@ namespace SistemaLocadora
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-         
-
+        {
             PesquisarCliente cad = new PesquisarCliente();
             cad.Buscar();
             cad.ShowDialog();
 
         }
 
-        private void cadastraClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cliente1 cli = new Cliente1(0); 
-            cli.ShowDialog();
-        }
 
         private void cadastraFilmesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,10 +48,13 @@ namespace SistemaLocadora
 
         private void CasdastroFuncionariotoolStrip_Click(object sender, EventArgs e)
         {
-            LogRh logRh = new LogRh();  
-             logRh.ShowDialog();
+            LogRh logRh = new LogRh();
+            logRh.ShowDialog();
 
-          
+
         }
+
+       
     }
 }
+

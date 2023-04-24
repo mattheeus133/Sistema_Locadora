@@ -1,4 +1,5 @@
 ﻿using SistemaLocadora.Data;
+using SistemaLocadora.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,18 +21,6 @@ namespace SistemaLocadora
         }
         Conn conn = new Conn();
 
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            var nCdCliente =Convert.ToInt32(dtgCliente.Rows[dtgCliente.CurrentCell.RowIndex].Cells[0].Value);
-            Cliente1 cadastro_Cliente = new Cliente1(nCdCliente);
-            cadastro_Cliente.ShowDialog();
-        }
 
         public void Buscar()
         {
@@ -60,5 +49,42 @@ namespace SistemaLocadora
                 MessageBox.Show("Falha\n\n" + ex.Message);
             }
         }
+
+        private void ExcluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Retorno(Operacao.Excluir);
+        }
+
+        private void alterartoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Retorno(Operacao.Alterar);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Retorno(Operacao.Adicionar);
+        }
+
+        public void Retorno(Operacao operacao)
+        {
+            if (operacao == Operacao.Alterar)
+            {
+                var nCdCliente = Convert.ToInt32(dtgCliente.Rows[dtgCliente.CurrentCell.RowIndex].Cells[0].Value);
+                Cliente1 cadastro_Cliente = new Cliente1(nCdCliente, Operacao.Alterar);
+                cadastro_Cliente.ShowDialog();
+            }
+            if (operacao == Operacao.Excluir)
+            {
+                var nCdCliente = Convert.ToInt32(dtgCliente.Rows[dtgCliente.CurrentCell.RowIndex].Cells[0].Value);
+                Cliente1 cadastro_Cliente = new Cliente1(nCdCliente, Operacao.Excluir);
+                cadastro_Cliente.ShowDialog();
+            }
+            if (operacao == Operacao.Adicionar)
+            {
+                Cliente1 cli = new Cliente1(0, Operacao.Adicionar);
+                cli.ShowDialog();
+            }
+        }
+        
     }
 }
