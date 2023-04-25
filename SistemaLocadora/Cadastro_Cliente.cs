@@ -34,37 +34,28 @@ namespace SistemaLocadora
 
             if (operacao == Operacao.Excluir)
             {
-                this.Text += " - Excluir";
+                this.Text += " - Excluir Cliente";
                 TravarTxt();
                 btnCadastra.Visible = false;
-                btnLimpar.Visible = false;
                 btnExcluir.Visible = true;
                 
             }
-        }
-
-        public void TravarTxt()
-        {
-            txtNome.Enabled = false;
-            txtNasc.Enabled = false;
-            cbGenero.Enabled = false;
-            txtEmail.Enabled = false;
-            txtTel.Enabled = false;
-            txtCel.Enabled = false;
-            cbPessoa.Enabled = false;
-            txtCpf.Enabled = false;
-            txtRg.Enabled = false;
-            txtOrg.Enabled = false;
-            txtUf.Enabled = false;
-            txtCep.Enabled = false;
-            txtEnd.Enabled = false;
-            txtNumCasa.Enabled =false;
-            txtUfend.Enabled = false;
-            txtBairro.Enabled = false;
-            txtCidade.Enabled = false;
-            txtComplemento.Enabled = false;
+            if(operacao == Operacao.Adicionar)
+            {
+                this.Text += " - Cadastra Cliente ";
+                btnCadastra.Visible = true;
+                btnExcluir.Visible = false;
+            }
+            if (operacao == Operacao.Alterar)
+            {
+                this.Text += " - Alterar Cliente ";
+                btnCadastra.Visible = true;
+                btnExcluir.Visible = false;
+            }
 
         }
+
+       
             
 
 
@@ -152,7 +143,8 @@ namespace SistemaLocadora
                     novoCliente.cComplemento = txtComplemento.Text;
 
                     repositorioCliente.update(novoCliente);
-                    this.Close();
+                    Limpar();
+                    
                 }
 
                 else
@@ -180,7 +172,7 @@ namespace SistemaLocadora
 
                     repositorioCliente.Save(novoCliente);
                     txtId.Text = novoCliente.nCdCliente.ToString();
-                    this.Close();
+                    Limpar();
                 }
             }
             catch
@@ -203,14 +195,6 @@ namespace SistemaLocadora
             #endregion
 
         }
-        #endregion
-
-        #region Botao Limpar
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            Limpar();
-        }
-
         #endregion
 
         #region Botão Sair
@@ -276,7 +260,33 @@ namespace SistemaLocadora
         }
         #endregion
 
-       public void GetCliente(int nCdCliente)
+
+        #region Metodos
+
+        public void TravarTxt() // Metodo de Travar os txt pra nao entra nenhum dado
+        {
+            txtNome.Enabled = false;
+            txtNasc.Enabled = false;
+            cbGenero.Enabled = false;
+            txtEmail.Enabled = false;
+            txtTel.Enabled = false;
+            txtCel.Enabled = false;
+            cbPessoa.Enabled = false;
+            txtCpf.Enabled = false;
+            txtRg.Enabled = false;
+            txtOrg.Enabled = false;
+            txtUf.Enabled = false;
+            txtCep.Enabled = false;
+            txtEnd.Enabled = false;
+            txtNumCasa.Enabled = false;
+            txtUfend.Enabled = false;
+            txtBairro.Enabled = false;
+            txtCidade.Enabled = false;
+            txtComplemento.Enabled = false;
+
+        }
+
+        public void GetCliente(int nCdCliente) //metodo de Preencher os TextBox
         {
 
             try
@@ -358,6 +368,7 @@ namespace SistemaLocadora
 
 
         }
+        #endregion
     }
 }
 

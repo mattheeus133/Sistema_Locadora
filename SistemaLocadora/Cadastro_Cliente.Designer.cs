@@ -43,7 +43,6 @@ namespace SistemaLocadora
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCadastra = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -185,7 +184,7 @@ namespace SistemaLocadora
             // 
             this.btnCadastra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCadastra.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastra.Location = new System.Drawing.Point(41, 290);
+            this.btnCadastra.Location = new System.Drawing.Point(155, 279);
             this.btnCadastra.Name = "btnCadastra";
             this.btnCadastra.Size = new System.Drawing.Size(119, 47);
             this.btnCadastra.TabIndex = 19;
@@ -193,23 +192,11 @@ namespace SistemaLocadora
             this.btnCadastra.UseVisualStyleBackColor = false;
             this.btnCadastra.Click += new System.EventHandler(this.btnCadastra_Click);
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLimpar.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(166, 290);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(119, 47);
-            this.btnLimpar.TabIndex = 20;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.Red;
             this.btnExcluir.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(291, 290);
+            this.btnExcluir.Location = new System.Drawing.Point(155, 290);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(119, 47);
             this.btnExcluir.TabIndex = 21;
@@ -521,7 +508,6 @@ namespace SistemaLocadora
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastra);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -561,7 +547,6 @@ namespace SistemaLocadora
         private Label label7;
         private Label label8;
         private Button btnCadastra;
-        private Button btnLimpar;
         private Button btnExcluir;
         private Button btnSair;
         private PictureBox pictureBox1;

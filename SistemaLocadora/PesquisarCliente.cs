@@ -53,16 +53,19 @@ namespace SistemaLocadora
         private void ExcluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Retorno(Operacao.Excluir);
+            Buscar();
         }
 
         private void alterartoolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Retorno(Operacao.Alterar);
+            Buscar();
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Retorno(Operacao.Adicionar);
+            Buscar();
         }
 
         public void Retorno(Operacao operacao)
