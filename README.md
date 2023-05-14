@@ -42,21 +42,21 @@ Interface de login do funcinario no sistema da locadora.
 
 **Obs:** Algumas funções no sistema precisara de uma permissão de acesso superior.
 
-![LoginLocadora](Imag/LoginLocadora.png)
+![LoginLocadora](https://github.com/mattheeus133/Sistema_Locadora/blob/main/README_Locadora/Imag/LoginLocadora.png)
 
   - `Pagina Inicial`: 
 ##### Interface inicial do sistema:
 Interface inicial do sistema onde sera feito a escolha de atividade a ser ultilizada no momento.
 
 
-![InterfacePrin](https://drive.google.com/file/d/1r1r3mDD1kpIW1-id8r6CCp8X5Sj3eW3x/view?usp=share_link)
+![InterfacePrin](https://github.com/mattheeus133/Sistema_Locadora/blob/main/README_Locadora/Imag/InterfacePrin.png)
 
 
 - `Pagina de Cadastro do Cliente`: 
 
 Cadastro de cliente 
 
-![CadCliente](https://drive.google.com/file/d/1C5A3qHhnEffSAE73cJNQVmpTMJL28A_e/view?usp=share_link)
+![CadCliente](https://github.com/mattheeus133/Sistema_Locadora/blob/main/README_Locadora/Imag/CadCliente.png)
 
 # Acesso ao projeto
 
