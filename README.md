@@ -42,7 +42,7 @@ Interface de login do funcinario no sistema da locadora.
 
 **Obs:** Algumas funções no sistema precisara de uma permissão de acesso superior.
 
-![LoginLocadora](https://drive.google.com/file/d/1sG6HZY6udOtgCiuLkY38qV26Ku5oDfGx/view?usp=share_link)
+![LoginLocadora](Imag/LoginLocadora.png)
 
   - `Pagina Inicial`: 
 ##### Interface inicial do sistema:
